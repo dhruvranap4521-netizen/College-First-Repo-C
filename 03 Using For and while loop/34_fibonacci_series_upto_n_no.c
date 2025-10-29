@@ -2,18 +2,21 @@
 
 int main(){
 
-    int a,i=1,b=0;
+    int a=1,i=1,b=0,n,c;
 
-    printf("Give me the no which you want to stop the fibonacci series :");
-    scanf("%d",&a);
+    printf("Enter how many terms of the Fibonacci series you want: ");
+    scanf("%d", &n);
 
-    printf("nth term fibonacci series :");
-    while (i<=a)
+   printf("Fibonacci series up to %d terms: ", n);
+
+    while (i<=n)
     {
-        b+=i;
-        i+=b;
-        printf("%d",&b);
+        printf("%d ",b);
+        c = b+a;
+        a=b;
+        b=c;
+        
+        i++;
     }
-    
-    
+ 
 }
