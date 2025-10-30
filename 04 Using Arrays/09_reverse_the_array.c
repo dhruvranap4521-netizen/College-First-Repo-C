@@ -1,7 +1,9 @@
+// 1st method
+
 #include <stdio.h>
 
 int main() {
-    int a[5], n, i;
+    int a[5], n, i,b[5];
 
     printf("Enter number of elements (max 5): ");
     scanf("%d", &n);
@@ -17,11 +19,13 @@ int main() {
     }
 
     printf("\nReversed array: ");
-    for (i = n - 1; i >= 0; i--) {
-        printf("%d ", a[i]);
+    for (i = 0; i <n; i++) {
+        b[i]=a[n-1-i];
+    }
+    for(i=0;i<n;i++){
+        printf("%d ",b[i]);
     }
 
-    return 0;
 }
 
 //  2nd method
@@ -55,4 +59,5 @@ int reverse(){
     }
 
 }
+
 
